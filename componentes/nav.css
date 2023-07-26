@@ -2,12 +2,29 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
+}
+.contenedorPrincipal {
   background: #1e213a;
+  height: 100vh;
+  
+}
+#Search {
+ height: 100vh;
+ width: 100vh;
+ margin-top: 80px;
+ background-color: #1e213a;
+  display: none;
+}
+#Search.active {
+  position: absolute;
+  display: flex;
+
 }
 .Milocation {
   display: flex;
   justify-content: space-between;
-  padding: 18px 11px;
+  padding: 13px 11px;
 }
 .Milocation button {
   width: 161px;
@@ -19,6 +36,8 @@
 .fondo-Nubes {
   display: flex;
   justify-content: center;
+  width: 300px;
+  height: 200px;
 }
 .fondo-Nubes > img {
 }
@@ -41,7 +60,7 @@
   color: #a09fb1;
   text-align: center;
   font-family: Raleway;
-  font-size: 36px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;

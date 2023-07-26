@@ -6,7 +6,7 @@ import Main from "../../componentes/Main";
 
 export default function Home() {
   const KEY = "abaf2c338fc00a0cae5d37159644ba0a";
-  const city = "Arequipa";
+  const [city,setCity] = useState( "Arequipa");
   const [data, setData] = useState();
   useEffect(() => {
     const promesa = fetch(
@@ -18,15 +18,19 @@ export default function Home() {
     });
     console.log(data);
   }, [city]);
-
+  
   return (
     <div>
-      {data && 
-      <Nav grados={data.main.temp} city={data.name} />
-     
-      
+      {data && (
+        <>
+        
+        <Nav  grados={data.main.temp} city={data.name} />
+        {/* <Main /> */}
+        
+        </>
+        
 
-      }
+      )}
       
     </div>
   );
