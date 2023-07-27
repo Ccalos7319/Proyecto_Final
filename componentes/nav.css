@@ -1,25 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 .contenedorPrincipal {
   background: #1e213a;
   height: 100vh;
-  
 }
 #Search {
- height: 100vh;
- width: 100vh;
- margin-top: 80px;
- background-color: #1e213a;
+  height: 100vh;
+  width: 100vh;
+  margin-top: 80px;
+  background-color: #1e213a;
   display: none;
 }
 #Search.active {
   position: absolute;
   display: flex;
-
 }
 .Milocation {
   display: flex;
@@ -48,18 +46,18 @@
   flex-direction: column;
   gap: 40px;
 }
-.contenedor-Informacion > h1 {
+.contenedor-Informacion  h1 {
   display: flex;
   justify-content: center;
   color: #e7e7eb;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 100px;
   font-weight: 500;
 }
-.contenedor-Informacion > h2 {
+.contenedor-Informacion  h2 {
   color: #a09fb1;
   text-align: center;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -70,13 +68,11 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-
   color: #88869d;
   font-family: Raleway;
   font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
 }
 .location {
   display: flex;
@@ -94,4 +90,5 @@
 .location img {
   width: 24px;
   height: 24px;
+
 }

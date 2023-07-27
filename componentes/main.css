@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.contenedorPrincipal-tiempo {
+  background-color: #100e1d;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+  gap: 26px;
+}
+.cardTiempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #e7e7eb;
+  background-color: #1e213a;
+  width: 120px;
+  height: 177px;
+  font-family: "Raleway", sans-serif;
+}
+.contenedorImagen {
+  width: 56.439px;
+  height: 62px;
+}
+.contenedorImagen > img {
+  width: 50px;
+  height: 50px;
+}
+.contenedor-temperatura {
+  display: flex;
+  gap: 16px;
+}
