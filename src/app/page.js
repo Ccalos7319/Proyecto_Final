@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Nav from "../../componentes/Nav";
 import Main from "../../componentes/Main";
+import Destacados from "../../componentes/Destacados";
 
 export default function Home() {
   const KEY = "abaf2c338fc00a0cae5d37159644ba0a";
@@ -21,9 +22,17 @@ export default function Home() {
       const datos = await value[0].json();
       const datos1 = await value[1].json();
       setData(datos);
-      setData1(datos1);
+
+      const dataFiltrada = datos1.list.reduce((result, el) => {
+        const fecha = el.dt_txt.split(" ")[0]; // Obtenemos solo la fecha sin la hora
+        if (!result[fecha]) {
+          result[fecha] = el;
+        }
+        return result;
+      }, {});
+      console.log(Object.values(dataFiltrada));
+      setData1(Object.values(dataFiltrada));
     });
-    console.log(data);
   }, [city]);
 
   function handleClick(e) {
@@ -36,7 +45,19 @@ export default function Home() {
       {data && (
         <>
           <Nav handle={handleClick} grados={data.main.temp} city={data.name} />
-          <Main fecha={data1.list[2].dt_txt} temMax={data1.list[2].main.temp_max} temMin={data1.list[2].main.temp_min} ciudad={data1.city.name}/>
+          <div className="cont">
+            {data1 &&
+              data1.map((elemento, i) => (
+                <Main
+                  key={i}
+                  fecha={elemento.dt_txt}
+                  temMax={elemento.main.temp_max}
+                  temMin={elemento.main.temp_min}
+                
+                />
+              ))}
+          </div>
+          <Destacados />
         </>
       )}
     </div>

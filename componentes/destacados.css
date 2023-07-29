@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.contenedor-destacadosHoy {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #100e1d;
+  height: 100vh;
+}
+.contenedor-destacadosHoy > p {
+  color: #e7e7eb;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.card-WindStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 328px;
+  height: 204px;
+  background: #1e213a;
+  color: #e7e7eb;
+}
+.card-WindStatus p:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Raleway;
+}
+.mph {
+  display: flex;
+}
+.mph p:first-child {
+  font-family: Raleway;
+  font-size: 64px;
+}
+.mph p:last-child {
+  color: #e7e7eb;
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 500;
+  display: flex;
+  align-items: end;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: Raleway;
+}
+.imagen-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #616475;
+  border-radius: 50px;
+  width: 20.304px;
+  height: 20.304px;
+}
+.imagen-navigation > img {
+  width: 12.183px;
+  height: 12.183px;
+  transform: rotate(-150deg);
+}
+/* Estilos a la card humidity  */
+.humidity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 328px;
+  height: 204px;
+  background: #1e213a;
+  color: #e7e7eb;
+  font-family: Raleway;
+}
+.humidity p:first-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+.humidity p:nth-child(2) {
+  font-family: Raleway;
+  font-size: 64px;
+  font-weight: 700;
+}
+/* Estilos a la card visibility  */
+.visibility {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 328px;
+  height: 204px;
+  background: #1e213a;
+  color: #e7e7eb;
+  font-family: Raleway;
+}

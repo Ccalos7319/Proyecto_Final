@@ -1,0 +1,10 @@
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #100E1D;
+    padding-top: 50px;
+    height: 100vh;
+    gap: 26px ;
+}
