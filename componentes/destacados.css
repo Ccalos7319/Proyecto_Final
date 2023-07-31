@@ -2,9 +2,12 @@
 .contenedor-destacadosHoy {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
   background-color: #100e1d;
-  height: 100vh;
+  height: 130vh;
 }
 .contenedor-destacadosHoy > p {
   color: #e7e7eb;
@@ -69,32 +72,96 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
   width: 328px;
   height: 204px;
   background: #1e213a;
   color: #e7e7eb;
   font-family: Raleway;
 }
-.humidity p:first-child {
-  font-size: 16px;
-  font-weight: 500;
+.porhumedad {
+  display: flex;
+  align-items: end;
 }
-.humidity p:nth-child(2) {
-  font-family: Raleway;
+.porhumedad p:first-child {
   font-size: 64px;
   font-weight: 700;
 }
+.porhumedad p:last-child {
+  font-family: Raleway;
+  font-size: 36px;
+
+  font-weight: 400;
+}
+.rangoPorciento {
+  display: flex;
+  gap: 90px;
+ 
+}
+.barra {
+  width: 229px;
+  height: 8px;
+  border-radius: 80px;
+  background: #e7e7eb;
+}
 /* Estilos a la card visibility  */
 .visibility {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
   width: 328px;
-  height: 204px;
+  height: 159px;
   background: #1e213a;
   color: #e7e7eb;
   font-family: Raleway;
+}
+.miles {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+.miles p:first-child {
+  font-family: Raleway;
+  font-size: 64px;
+  font-weight: 700;
+}
+.miles p:last-child {
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 500;
+}
+/* Estilos a la card Air Presure  */
+.air-Presure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  width: 328px;
+  height: 160px;
+  background: #1e213a;
+  color: #e7e7eb;
+  font-family: Raleway;
+}
+.air-Presure p:first-child {
+  font-family: Raleway;
+  font-size: 16px;
+
+  font-weight: 500;
+}
+.mb {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+}
+.mb p:first-child {
+  font-family: Raleway;
+  font-size: 64px;
+  font-weight: 700;
+}
+.mb p:last-child {
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 500;
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./nav.css";
-import Search from "./Search";
-function Nav({ grados, city,handle }) {
+
+function Nav({ grados,clima, city, buscar, ButtonClick, input, change }) {
   const currentDate = new Date();
   const options = {
     weekday: "short",
@@ -13,14 +13,39 @@ function Nav({ grados, city,handle }) {
   const [active, setActive] = useState(false);
   const classActive = active === true ? "active" : "";
   function handleActive() {
-    setActive(!active)
+    setActive(!active);
   }
- 
 
   return (
     <>
-      <div id="Search"className={classActive} >
-        <Search buscar={handle} />
+      <div id="Search" className={classActive}>
+        <div className="contenedorPrin">
+          <div className="imgClose" >
+            <img onClick={handleActive} src="./close.svg" alt="" />
+          </div>
+
+          <div className="SearchLocation">
+            <input
+              type="text"
+              value={input}
+              onChange={change}
+              placeholder="Search location"
+            />
+            <button onClick={ButtonClick}>Search</button>
+          </div>
+
+          <div className="option">
+            <button value={"london"} onClick={buscar}>
+              London
+            </button>
+            <button value={"Barcelona"} onClick={buscar}>
+              Barcelona
+            </button>
+            <button value={"Long Beach"} onClick={buscar}>
+              Long Beach
+            </button>
+          </div>
+        </div>
       </div>
 
       <nav className="contenedorPrincipal ">
@@ -28,23 +53,27 @@ function Nav({ grados, city,handle }) {
           <div>
             <button onClick={handleActive}>Search for places</button>
           </div>
-          <div>
-            <img src="./MiLocation.png" alt="" />
+          <div className="icono-ubicacion">
+            <img src="./location.svg" alt="" />
           </div>
         </div>
         <div className="fondo-Nubes">
-          <img src="./fondoNubes.png" alt="" />
+          <img src="./Cloud-background.png" alt="" />
         </div>
         <div className="contenedor-Informacion">
-          <h1>{grados.toFixed(0)}°c</h1>
-          <h2>Shower</h2>
+          <div className="gradosCentigrados">
+            <p>{grados.toFixed(0)}</p>
+            <p>°C</p>
+          </div>
+          
+          <h2>{clima}</h2>
           <div className="contenedor-Fecha">
             <h3>Today</h3>
             <span>.</span>
             <h3>{formattedDate}</h3>
           </div>
           <div className="location">
-            <img src="./city.png" alt="" />
+            <img src="./ubicacion.svg" alt="" />
             <h3>{city}</h3>
           </div>
         </div>

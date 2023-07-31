@@ -4,14 +4,71 @@
   margin: 0;
   box-sizing: border-box;
 }
+.contenedorPrin {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 375px;
+  height: 672px;
+
+  gap: 38px;
+}
+.imgClose {
+  display: flex;
+  justify-content: end;
+  width: 340px;
+  padding-top: 12px;
+}
+.SearchLocation {
+  display: flex;
+  justify-content: space-evenly;
+  width: 375px;
+}
+.SearchLocation input {
+  width: 230px;
+  height: 48px;
+  background: #1e213a;
+  color: white;
+  border: 1px solid;
+}
+.SearchLocation button {
+  width: 86px;
+  height: 48px;
+  border: none;
+  background: #3c47e9;
+  color: white;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  gap: 60px;
+  padding-left: 12px;
+  width: 375px;
+  height: 100vh;
+}
+.option button {
+  height: 50px;
+  background: #1e213a;
+  border: none;
+  color: white;
+  text-align: left;
+}
+.option button:hover {
+  border: 1px solid #616475;
+}
 .contenedorPrincipal {
   background: #1e213a;
   height: 100vh;
+  width: 375px;
+  height: 810px;
+  flex-shrink: 0;
 }
 #Search {
   height: 100vh;
   width: 100vh;
-  margin-top: 80px;
+  /* margin-top: 20px; */
   background-color: #1e213a;
   display: none;
 }
@@ -22,7 +79,8 @@
 .Milocation {
   display: flex;
   justify-content: space-between;
-  padding: 13px 11px;
+  padding: 13px 15px;
+  width: 375px;
 }
 .Milocation button {
   width: 161px;
@@ -31,13 +89,15 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: white;
 }
+
 .fondo-Nubes {
-  display: flex;
-  justify-content: center;
-  width: 300px;
-  height: 200px;
+  background: url("/public/Cloud-background.png"),
+    lightgray 50% / cover no-repeat;
+  background-color: #1e213a;
 }
 .fondo-Nubes > img {
+  width: 400px;
+  height: 140px;
 }
 .contenedor-Informacion {
   display: flex;
@@ -46,19 +106,29 @@
   flex-direction: column;
   gap: 40px;
 }
-.contenedor-Informacion  h1 {
+.gradosCentigrados {
+  display: flex;
+  align-items: end;
+}
+.gradosCentigrados p:first-child {
   display: flex;
   justify-content: center;
   color: #e7e7eb;
   font-family: "Raleway", sans-serif;
-  font-size: 100px;
+  font-size: 144px;
   font-weight: 500;
 }
-.contenedor-Informacion  h2 {
+.gradosCentigrados p:last-child {
+  color: #a09fb1;
+  font-family: Raleway;
+  font-size: 48px;
+  font-weight: 500;
+}
+.contenedor-Informacion h2 {
   color: #a09fb1;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -90,5 +160,4 @@
 .location img {
   width: 24px;
   height: 24px;
-
 }

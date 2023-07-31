@@ -1,21 +1,21 @@
-import Image from "next/image"
+
 import "./main.css";
-function Main({fecha, temMax,temMin,ciudad}) {
-  // const currentDate = new Date();
-  // const options = {
-  //   weekday: "short",
-  //   day: "numeric",
-  //   month: "short",
-  // };
-  // fecha = currentDate.toLocaleDateString(undefined, options);
+function Main({nuevaFecha,imagenTiempo, temMax,temMin,ciudad}) {
+  const currentDate = new Date(nuevaFecha);
+  const options = {
+    weekday: 'short',
+    day: 'numeric',
+    month: 'short',
+  };
+  const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
   return (
     <>
     <div className="contenedorPrincipal-tiempo">
       <div className="cardTiempo">
-        <p>{fecha}</p>
+        <p>{formattedDate}</p>
         <div className="contenedorImagen">
-          <img src="./Sleet.png" alt="" />
+          <img src={imagenTiempo} alt="" />
         </div>
         <div className="contenedor-temperatura">
           <p>{temMax.toFixed(0)}°C</p>

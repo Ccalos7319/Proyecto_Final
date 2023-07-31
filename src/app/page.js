@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Nav from "../../componentes/Nav";
 import Main from "../../componentes/Main";
 import Destacados from "../../componentes/Destacados";
+import Feet from "../../componentes/feet";
 
 export default function Home() {
   const KEY = "abaf2c338fc00a0cae5d37159644ba0a";
@@ -39,25 +40,34 @@ export default function Home() {
     const value = e.target.value;
     setCity(value);
   }
+  const [inputValue, setInputValue] = useState("");
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+   
+  };
 
+  const handleButtonClick = () =>{
+    setCity(inputValue);
+  }
   return (
     <div>
       {data && (
         <>
-          <Nav handle={handleClick} grados={data.main.temp} city={data.name} />
+          <Nav input={inputValue} ButtonClick={handleButtonClick} change={handleChange} buscar={handleClick} grados={data.main.temp} clima={data.weather[0].main} city={data.name} />
           <div className="cont">
             {data1 &&
               data1.map((elemento, i) => (
                 <Main
                   key={i}
-                  fecha={elemento.dt_txt}
+                  nuevaFecha={elemento.dt_txt}
                   temMax={elemento.main.temp_max}
                   temMin={elemento.main.temp_min}
                 
                 />
               ))}
           </div>
-          <Destacados />
+          <Destacados presure={data.main.pressure} visibility={data.visibility} humidity={data.main.humidity} speed={data.wind.speed}/>
+          <Feet />
         </>
       )}
     </div>

@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.username {
+  text-align: center;
+  color: #a09fb1;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  background: #100e1d;
+  padding: 24px;
+}
