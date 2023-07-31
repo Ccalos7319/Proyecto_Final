@@ -2,14 +2,11 @@
 .contenedor-destacadosHoy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
   align-items: center;
   gap: 20px;
   background-color: #100e1d;
-  height: 130vh;
 }
-.contenedor-destacadosHoy > p {
+.titulo {
   color: #e7e7eb;
   font-family: Raleway;
   font-size: 24px;
@@ -95,7 +92,6 @@
 .rangoPorciento {
   display: flex;
   gap: 90px;
- 
 }
 .barra {
   width: 229px;
@@ -164,4 +160,24 @@
   font-family: Raleway;
   font-size: 36px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 1280px) {
+  .titulo {
+    text-align:left;
+   
+  }
+  .contenedor-destacadosHoy {
+    width: 100vh;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #card2 {
+    order: 3;
+  }
+  #card4 {
+    order: 4;
+  }
 }

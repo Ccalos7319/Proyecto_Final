@@ -3,9 +3,10 @@ import "./destacados.css";
 function Destacados({ presure, visibility, humidity, speed }) {
   return (
     <>
+    <p className="titulo">Today’s Hightlights</p>
       <div className="contenedor-destacadosHoy">
-        <p>Today’s Hightlights</p>
-        <div className="card-WindStatus">
+        
+        <div id="card1" className="card-WindStatus">
           <p>Wind status</p>
           <div className="mph">
             <p>{speed}</p>
@@ -20,7 +21,7 @@ function Destacados({ presure, visibility, humidity, speed }) {
           </div>
         </div>
 
-        <div className="humidity">
+        <div id="card2" className="humidity">
           <p>Humidity</p>
           <div className="porhumedad">
             <p>{humidity}</p>
@@ -44,7 +45,7 @@ function Destacados({ presure, visibility, humidity, speed }) {
           
         </div>
 
-        <div className="visibility">
+        <div id="card3" className="visibility">
           <p>Visibility</p>
           <div className="miles">
             <p>{visibility.toFixed()} </p>
@@ -52,7 +53,7 @@ function Destacados({ presure, visibility, humidity, speed }) {
           </div>
         </div>
 
-        <div className="air-Presure ">
+        <div id="card4" className="air-Presure ">
           <p>Air Pressure</p>
           <div className="mb">
             <p>{presure}</p>

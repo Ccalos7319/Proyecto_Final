@@ -43,33 +43,56 @@ export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const handleChange = (e) => {
     setInputValue(e.target.value);
-   
   };
 
-  const handleButtonClick = () =>{
+  const handleButtonClick = () => {
     setCity(inputValue);
-  }
+  };
   return (
-    <div>
-      {data && (
-        <>
-          <Nav input={inputValue} ButtonClick={handleButtonClick} change={handleChange} buscar={handleClick} grados={data.main.temp} clima={data.weather[0].main} city={data.name} />
-          <div className="cont">
-            {data1 &&
-              data1.map((elemento, i) => (
-                <Main
-                  key={i}
-                  nuevaFecha={elemento.dt_txt}
-                  temMax={elemento.main.temp_max}
-                  temMin={elemento.main.temp_min}
-                
+    <>
+      <div>
+        {data && (
+          <div className="contenedor-responsive-principal">
+            <div>
+              <Nav
+                input={inputValue}
+                ButtonClick={handleButtonClick}
+                change={handleChange}
+                buscar={handleClick}
+                grados={data.main.temp}
+                clima={data.weather[0].main}
+                city={data.name}
+              />
+            </div>
+
+            <div className="cont">
+              {data1 &&
+                data1.map((elemento, i) => (
+                  <Main
+                    key={i}
+                    nuevaFecha={elemento.dt_txt}
+                    imagenTiempo={elemento.weather[0].main}
+                    temMax={elemento.main.temp_max}
+                    temMin={elemento.main.temp_min}
+                  />
+                ))}
+              <div className="destacados">
+                <Destacados
+                  presure={data.main.pressure}
+                  visibility={data.visibility}
+                  humidity={data.main.humidity}
+                  speed={data.wind.speed}
                 />
-              ))}
+
+                 <div className="feet">
+                <Feet />
+              </div>
+              </div>
+             
+            </div>
           </div>
-          <Destacados presure={data.main.pressure} visibility={data.visibility} humidity={data.main.humidity} speed={data.wind.speed}/>
-          <Feet />
-        </>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 }

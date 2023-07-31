@@ -1,7 +1,16 @@
 import { useState } from "react";
 import "./nav.css";
-
-function Nav({ grados,clima, city, buscar, ButtonClick, input, change }) {
+import Image from "next/image";
+import limpio from "../public/Clear.png";
+import niebla from "../public/nube.png";
+import granizo from "../public/Hail.png"
+import lluviaPesada from "../public/HeavyRain.png";
+import nubesLijeras from "../public/LightCloud.png";
+import lloviznar from "../public/Shower.png";
+import aguanieve from "../public/Sleet.png";
+import nieve from "../public/Snow.png";
+import tormenta from "../public/Thunderstorm.png";
+function Nav({ grados,clima,city, buscar, ButtonClick, input, change }) {
   const currentDate = new Date();
   const options = {
     weekday: "short",
@@ -15,7 +24,34 @@ function Nav({ grados,clima, city, buscar, ButtonClick, input, change }) {
   function handleActive() {
     setActive(!active);
   }
-
+  let tiempo;
+  if (clima === "Clear" ) {
+    tiempo = limpio;
+  }
+  if (clima === "Clouds" ) {
+    tiempo = nubesLijeras;
+  }
+  if (clima === "Rain" ) {
+    tiempo = lluviaPesada;
+  }
+  if (clima === "Thunderstorm" ) {
+    tiempo = tormenta;
+  }
+  if (clima === "Snow" ) {
+    tiempo = nieve;
+  }
+	if (clima === "Drizzle" ) {
+    tiempo = lloviznar;
+  }
+  if (clima === "Sleet" ) {
+    tiempo = aguanieve;
+  }
+  if (clima === "Hail" ) {
+    tiempo = granizo;
+  }
+  if (clima === "Fog" ) {
+    tiempo = niebla;
+  }
   return (
     <>
       <div id="Search" className={classActive}>
@@ -54,11 +90,17 @@ function Nav({ grados,clima, city, buscar, ButtonClick, input, change }) {
             <button onClick={handleActive}>Search for places</button>
           </div>
           <div className="icono-ubicacion">
-            <img src="./location.svg" alt="" />
+            <img src="./location.svg" alt="imagen" />
           </div>
         </div>
         <div className="fondo-Nubes">
-          <img src="./Cloud-background.png" alt="" />
+          <div>
+            <Image src={tiempo} width={150} height={140} alt="imagen" />
+          </div>
+         {/* <div>
+          <img src="./Cloud-background.png" alt="imagen" />
+         </div> */}
+          
         </div>
         <div className="contenedor-Informacion">
           <div className="gradosCentigrados">

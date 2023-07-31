@@ -8,3 +8,18 @@
     height: 100vh;
     gap: 26px ;
 }
+@media screen and (min-width: 1280px) {
+    .cont {
+       height: 100vh;
+       width: 100vh;
+    }
+    .contenedor-responsive-principal {
+        display: flex;
+    }
+   .feet {
+    align-items: end;
+   }
+   .destacados {
+    
+   }
+}
