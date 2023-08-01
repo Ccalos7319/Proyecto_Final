@@ -46,7 +46,9 @@ function Main({nuevaFecha,imagenTiempo, temMax,temMin,ciudad}) {
 
   return (
     <>
+    
     <div className="contenedorPrincipal-tiempo">
+      
       <div className="cardTiempo">
         <p>{formattedDate}</p>
         <div className="contenedorImagen">

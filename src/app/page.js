@@ -18,6 +18,7 @@ export default function Home() {
     const promesa1 = fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${KEY}&units=metric`
     );
+    
 
     Promise.all([promesa, promesa1]).then(async (value) => {
       const datos = await value[0].json();
@@ -51,8 +52,11 @@ export default function Home() {
   return (
     <>
       <div>
+        
         {data && (
           <div className="contenedor-responsive-principal">
+
+            
             <div>
               <Nav
                 input={inputValue}
@@ -63,11 +67,17 @@ export default function Home() {
                 clima={data.weather[0].main}
                 city={data.name}
               />
-            </div>
 
+            </div>
+            
             <div className="cont">
+            <div className="boton-Grados-CF">
+                <p>°C</p>
+                <p>°F</p>
+            </div>
               {data1 &&
                 data1.map((elemento, i) => (
+                  
                   <Main
                     key={i}
                     nuevaFecha={elemento.dt_txt}
@@ -76,6 +86,7 @@ export default function Home() {
                     temMin={elemento.main.temp_min}
                   />
                 ))}
+                
               <div className="destacados">
                 <Destacados
                   presure={data.main.pressure}
@@ -84,11 +95,10 @@ export default function Home() {
                   speed={data.wind.speed}
                 />
 
-                 <div className="feet">
-                <Feet />
+                <div className="feet">
+                  <Feet />
+                </div>
               </div>
-              </div>
-             
             </div>
           </div>
         )}

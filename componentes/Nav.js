@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client"
+import { useEffect,useState } from "react";
+
 import "./nav.css";
 import Image from "next/image";
 import limpio from "../public/Clear.png";
@@ -52,6 +54,43 @@ function Nav({ grados,clima,city, buscar, ButtonClick, input, change }) {
   if (clima === "Fog" ) {
     tiempo = niebla;
   }
+
+  //Esta parte del cogigo me ayudara a obtener mi ubicacion 
+  const [cityName, setCityName] = useState('');
+  const KEY = "abaf2c338fc00a0cae5d37159644ba0a";
+  const [dataCiudad, setDataCiudad] = useState();
+  useEffect(() => {
+    const handleGetLocation = async () => {
+      if ("geolocation" in navigator) {
+        try {
+          // Obtener la ubicación del usuario
+          const position = await new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject);
+          });
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+console.log(latitude)
+console.log(longitude)
+          // Usar el servicio de geocodificación inversa de Nominatim
+          const promesa = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${KEY}`);
+
+          Promise.all([promesa]).then(async (value) => {
+            const datos = await value[0].json();
+            console.log(datos.name)
+          });
+
+
+        } catch (error) {
+          console.error("Error al obtener la ubicación:", error);
+          setCityName('Error al obtener la ubicación');
+        }
+      } else {
+        console.error("Geolocalización no disponible en este navegador.");
+      }
+    };
+
+    handleGetLocation();
+  }, []);
   return (
     <>
       <div id="Search" className={classActive}>
@@ -91,6 +130,7 @@ function Nav({ grados,clima,city, buscar, ButtonClick, input, change }) {
           </div>
           <div className="icono-ubicacion">
             <img src="./location.svg" alt="imagen" />
+            
           </div>
         </div>
         <div className="fondo-Nubes">
