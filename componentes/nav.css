@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* agregando estilos a la parte del buscador con sus opciones */
 .contenedorPrin {
   display: flex;
   flex-direction: column;
@@ -25,12 +26,21 @@
   justify-content: space-evenly;
   width: 375px;
 }
+.SearchLocationLupa > img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
 .SearchLocation input {
   width: 230px;
   height: 48px;
   background: #1e213a;
   color: white;
   border: 1px solid;
+  padding: 20px;
+  text-align: center;
 }
 .SearchLocation button {
   width: 86px;
@@ -39,42 +49,68 @@
   background: #3c47e9;
   color: white;
 }
+.SearchLocation input::placeholder {
+  padding-left: 49px;
+  color: #616475;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
 .option {
   display: flex;
   flex-direction: column;
   padding-right: 24px;
   gap: 60px;
-  padding-left: 12px;
-  width: 375px;
+  padding-left: 22px;
+  width: 380px;
   height: 100vh;
 }
-.option button {
+.mi-boton {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: end;
+  padding: 20px;
   height: 50px;
   background: #1e213a;
   border: none;
-  color: white;
   text-align: left;
+  color: #e7e7eb;
+  font-size: 16px;
+  width: 340px;
+  height: 64px;
 }
-.option button:hover {
+.mi-boton > span {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100%;
+  width: 100vh;
+}
+
+.mi-boton:hover {
   border: 1px solid #616475;
 }
-.contenedorPrincipal {
-  background: #1e213a;
-  height: 100vh;
-  width: 375px;
-  
-  flex-shrink: 0;
-}
+
 #Search {
   height: 100vh;
-  
-  /* margin-top: 20px; */
   background-color: #1e213a;
   display: none;
 }
 #Search.active {
   position: absolute;
   display: flex;
+}
+/* agregando estilos al contenedor principal */
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: #1e213a;
+  height: 100vh;
+  width: 375px;
+
+  flex-shrink: 0;
 }
 .Milocation {
   display: flex;
@@ -90,19 +126,23 @@
   color: white;
 }
 
-.fondo-Nubes {
-  background: url("/public/Cloud-background.png"),
-    lightgray 50% / cover no-repeat;
-  background-color: #1e213a;
+/* dando estilos a las nubes del Nav */
+.container {
+  height: 200px;
   display: flex;
   justify-content: center;
- 
+  align-items: center;
 }
-/* .fondo-Nubes div:last-child > img {
-  width: 300px;
-  height: 300px;
-  
-} */
+.imageFront {
+  position: absolute;
+ z-index: -1;
+}
+.imageFront .active {
+  display: flex;
+  z-index: 0;
+}
+
+
 .contenedor-Informacion {
   display: flex;
   justify-content: center;
@@ -143,9 +183,8 @@
   justify-content: center;
   gap: 16px;
   color: #88869d;
-  font-family: Raleway;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 500;
   font-family: "Raleway", sans-serif;
 }
 .location {
@@ -169,10 +208,12 @@
   .contenedorPrincipal {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 6+0px;
   }
-.contenedor-Informacion {
-  gap: 60px;
-}
-
+  .contenedor-Informacion {
+    gap: 50px;
+  }
+  .Milocation {
+    padding-top: 42px;
+  }
 }

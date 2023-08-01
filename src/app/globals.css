@@ -8,6 +8,13 @@
   height: 100vh;
   gap: 26px;
 }
+.boton-Grados-CF {
+  display: none;
+}
+.destacados {
+ 
+  width: 100vh;
+}
 @media screen and (min-width: 1280px) {
   .cont {
     height: 100vh;
@@ -28,11 +35,12 @@
     padding-right: 90px;
    
   }
-  .boton-Grados-CF > p {
+
+  .boton-Grados-CF button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    border: none;
     width: 40px;
     height: 40px;
     flex-shrink: 0;
@@ -41,5 +49,9 @@
     color: #110e3c;
     font-size: 18px;
     font-weight: 700;
+  }
+  .boton-Grados-CF button:hover {
+    background: #585676;
+    color: #E7E7EB;
   }
 }

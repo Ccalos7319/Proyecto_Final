@@ -1,6 +1,11 @@
 import "./destacados.css";
 
 function Destacados({ presure, visibility, humidity, speed }) {
+
+ 
+const valorRedondeado = (visibility / 1000).toFixed(1); // "5.0"
+const valorNumerico = parseFloat(valorRedondeado); // 5.0 (número)
+
   return (
     <>
     <p className="titulo">Today’s Hightlights</p>
@@ -48,7 +53,7 @@ function Destacados({ presure, visibility, humidity, speed }) {
         <div id="card3" className="visibility">
           <p>Visibility</p>
           <div className="miles">
-            <p>{visibility.toFixed()} </p>
+            <p>{valorNumerico} </p>
             <p>miles</p>
           </div>
         </div>
