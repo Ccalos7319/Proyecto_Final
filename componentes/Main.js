@@ -47,7 +47,7 @@ function Main({nuevaFecha,imagenTiempo, temMax,temMin}) {
   return (
     <>
     
-    <div className="contenedorPrincipal-tiempo">
+    
       
       <div className="cardTiempo">
         <p>{formattedDate}</p>
@@ -63,7 +63,7 @@ function Main({nuevaFecha,imagenTiempo, temMax,temMin}) {
         </div>
       </div>
      
-    </div>
+    
 
     
     </>

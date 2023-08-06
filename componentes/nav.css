@@ -10,7 +10,7 @@
   flex-direction: column;
 
   align-items: center;
-  width: 500px;
+  width: 600px;
   height: 672px;
   padding-top: 30px;
   gap: 38px;
@@ -109,7 +109,7 @@
   padding-top: 30px;
   background: #1e213a;
   height: 100vh;
-  width: 500px;
+  width: 700px;
 
   flex-shrink: 0;
 }

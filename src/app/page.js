@@ -123,6 +123,7 @@ export default function Home() {
                 <button onClick={handleButtontemperatura}>°C</button>
                 <button onClick={handleButtontemperatura}>°F</button>
               </div>
+              <div className="contenedorPrincipal-tiempo">
               {data1 &&
                 data1.map((elemento, i) => (
                   <Main
@@ -133,7 +134,7 @@ export default function Home() {
                     temMin={elemento.main.temp_min}
                   />
                 ))}
-
+              </div>
               <div className="destacados">
                 <Destacados
                   presure={data.main.pressure}
