@@ -10,7 +10,7 @@ import aguanieve from "../public/Sleet.png";
 import nieve from "../public/Snow.png";
 import tormenta from "../public/Thunderstorm.png";
 
-function Main({nuevaFecha,imagenTiempo, temMax,temMin,ciudad}) {
+function Main({nuevaFecha,imagenTiempo, temMax,temMin}) {
   const currentDate = new Date(nuevaFecha);
   const options = {
     weekday: 'short',
@@ -59,7 +59,7 @@ function Main({nuevaFecha,imagenTiempo, temMax,temMin,ciudad}) {
         <div className="contenedor-temperatura">
           <p>{temMax.toFixed(0)}°C</p>
           <p>{temMin.toFixed(0)}°C</p>
-          <p>{ciudad}</p>
+          
         </div>
       </div>
      

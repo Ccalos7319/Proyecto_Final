@@ -24,3 +24,47 @@
   display: flex;
   gap: 16px;
 }
+
+@media (min-width: 2560px) {
+  .cardTiempo {
+    width: 200px;
+    height: 280px;
+    font-size: 20px;
+  }
+  .contenedorImagen  {
+    height: 70px;
+    width: 70px;
+  }
+  .contenedorImagen > img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (min-width: 1440px) {
+  .cardTiempo {
+    width: 200px;
+    height: 280px;
+    font-size: 20px;
+  }
+  .contenedorImagen  {
+    height: 70px;
+    width: 70px;
+  }
+  .contenedorImagen > img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1280px) {
+  .cardTiempo {
+    width: 180px;
+    height: 230px;
+    font-size: 20px;
+  }
+}

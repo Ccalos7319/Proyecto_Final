@@ -98,7 +98,7 @@ function Nav({
           <div className="option">
             <div onClick={buscar}>
               <button onClick={handleActive} class="mi-boton" value={"london"}>
-                London <span>{">"}</span>
+                London 
               </button>
             </div>
             <div onClick={buscar}>
@@ -107,7 +107,7 @@ function Nav({
                 class="mi-boton"
                 value={"Barcelona"}
               >
-                Barcelona <span>{">"}</span>
+                Barcelona 
               </button>
             </div>
             <div onClick={buscar}>
@@ -116,7 +116,7 @@ function Nav({
                 class="mi-boton"
                 value={"Long Beach"}
               >
-                Long Beach <span>{">"}</span>
+                Long Beach 
               </button>
             </div>
           </div>
@@ -124,7 +124,8 @@ function Nav({
       </div>
 
       <nav className="contenedorPrincipal ">
-        <div className="Milocation">
+        <div className="contenedorInterno">
+          <div className="Milocation">
           <div>
             <button onClick={handleActive}>Search for places</button>
           </div>
@@ -134,7 +135,7 @@ function Nav({
         </div>
         <div className="container">
           <Image className="imageBack" src={tiempo} width={150} height={140} alt="imagen" />
-          <img  className="imageFront .active" src="./Cloud-background.png" alt="imagen" />
+          <img  className="imageFront active" src="./Cloud-background.png" alt="imagen" />
         </div>
         <div className="contenedor-Informacion">
           <div className="gradosCentigrados">
@@ -153,6 +154,8 @@ function Nav({
             <h3>{city}</h3>
           </div>
         </div>
+        </div>
+        
       </nav>
     </>
   );

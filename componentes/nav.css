@@ -10,9 +10,9 @@
   flex-direction: column;
 
   align-items: center;
-  width: 375px;
+  width: 500px;
   height: 672px;
-
+  padding-top: 30px;
   gap: 38px;
 }
 .imgClose {
@@ -105,10 +105,11 @@
 .contenedorPrincipal {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  align-items: center;
+  padding-top: 30px;
   background: #1e213a;
   height: 100vh;
-  width: 375px;
+  width: 500px;
 
   flex-shrink: 0;
 }
@@ -135,13 +136,12 @@
 }
 .imageFront {
   position: absolute;
- z-index: -1;
+  z-index: -1;
 }
 .imageFront .active {
   display: flex;
   z-index: 0;
 }
-
 
 .contenedor-Informacion {
   display: flex;
@@ -204,16 +204,58 @@
   width: 24px;
   height: 24px;
 }
-@media screen and (min-width: 1280px) {
+@media (min-width: 2560px) {
+  .Milocation {
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+    gap: 10rem;
+  }
   .contenedorPrincipal {
     display: flex;
-    flex-direction: column;
-    gap: 6+0px;
+    padding-top: 60px;
+    gap: 60px;
+    width: 500px;
   }
   .contenedor-Informacion {
     gap: 50px;
   }
   .Milocation {
     padding-top: 42px;
+  }
+  #Search {
+    width: 500px;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .SearchLocation {
+    gap: 1rem;
+  }
+  .SearchLocation input {
+    width: 250px;
+  }
+  .contenedor-Fecha {
+    font-size: 30px;
+  }
+  .location {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .contenedorPrincipal {
+    display: flex;
+    gap: 60px;
+  }
+  .contenedor-Informacion {
+    gap: 50px;
+  }
+  .Milocation {
+    padding-top: 42px;
+  }
+}
+@media (min-width: 768px) {
+  .contenedorPrincipal {
+    text-align: center;
+    align-items: center;
   }
 }
