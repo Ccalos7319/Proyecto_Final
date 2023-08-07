@@ -1,11 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contenedor-responsive-principal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
 .contenedorPrincipal-tiempo {
  
-  width: 25vh;
-  
+  height: auto;
   display: flex;
- flex-wrap: wrap;
- gap: 15px;
-  
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 .cont {
   display: flex;
@@ -14,34 +26,29 @@
   text-align: center;
   background-color: #100e1d;
   padding-top: 50px;
-  
   gap: 15px;
-  width: 700px;
+  width: 100%;
 }
 .boton-Grados-CF {
   display: none;
 }
 .destacados {
- 
   width: 100vh;
 }
 
 @media (min-width: 2560px) {
-  
   .contenedor-responsive-principal {
     display: flex;
-   
-   }
-   .boton-Grados-CF {
+  }
+  .boton-Grados-CF {
     display: flex;
     color: white;
-    justify-content:end;
+    justify-content: end;
     gap: 12px;
     width: 100vh;
     padding-right: 90px;
-   
   }
-  
+
   .boton-Grados-CF button {
     display: flex;
     justify-content: center;
@@ -58,44 +65,42 @@
   }
   .boton-Grados-CF button:hover {
     background: #585676;
-    color: #E7E7EB;
+    color: #e7e7eb;
   }
 }
 @media (min-width: 1440px) {
- .contenedor-responsive-principal {
-  display: flex;
- }
- .boton-Grados-CF {
-  display: flex;
-  color: white;
-  justify-content:end;
-  gap: 12px;
-  width: 100vh;
-  padding-right: 90px;
- 
-}
+  .contenedor-responsive-principal {
+    display: flex;
+  }
+  .boton-Grados-CF {
+    display: flex;
+    color: white;
+    justify-content: end;
+    gap: 12px;
+    width: 100vh;
+    padding-right: 90px;
+  }
 
-.boton-Grados-CF button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 50px;
-  background: #e7e7eb;
-  color: #110e3c;
-  font-size: 18px;
-  font-weight: 700;
+  .boton-Grados-CF button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #e7e7eb;
+    color: #110e3c;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .boton-Grados-CF button:hover {
+    background: #585676;
+    color: #e7e7eb;
+  }
 }
-.boton-Grados-CF button:hover {
-  background: #585676;
-  color: #E7E7EB;
-}
-}
-@media  (min-width: 1280px) {
-
+@media (min-width: 1280px) {
   .contenedor-responsive-principal {
     display: flex;
   }
@@ -105,11 +110,10 @@
   .boton-Grados-CF {
     display: flex;
     color: white;
-    justify-content:end;
+    justify-content: end;
     gap: 12px;
     width: 100vh;
     padding-right: 90px;
-   
   }
 
   .boton-Grados-CF button {
@@ -128,17 +132,15 @@
   }
   .boton-Grados-CF button:hover {
     background: #585676;
-    color: #E7E7EB;
+    color: #e7e7eb;
   }
   .destacados {
-   justify-content: center;
+    justify-content: center;
   }
 }
 
 @media (min-width: 768px) {
   .cont {
     width: 100vh;
-    
-    
   }
 }
